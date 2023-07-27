@@ -69,7 +69,9 @@ function Coins() {
   // isLoading이 fetchCoins의 작동 여부에 따라 boolean값을 반환해줌
   // data에는 json data가 담김
   const { isLoading, data } = useQuery<CoinInterface[]>('allCoins', fetchCoins);
-  /* const [coins, setCoins] = useState<CoinInterface[]>([]);
+  
+  /* without React Query
+  const [coins, setCoins] = useState<CoinInterface[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
