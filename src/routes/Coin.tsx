@@ -129,7 +129,9 @@ function Coin() {
     }
   );
   const loading = infoLoading || tickersLoading;
-  /* const [loading, setLoading] = useState(true);
+  
+  /* without React Query
+  const [loading, setLoading] = useState(true);
   const [info, setInfo] = useState<InfoData>();
   const [priceInfo, setPriceInfo] = useState<PriceData>();
 
