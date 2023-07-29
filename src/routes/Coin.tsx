@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
 import { Helmet } from 'react-helmet';
-import { Link, Outlet, useLocation, useMatch, useParams } from 'react-router-dom';
+import { Link, Outlet, useLocation, useMatch, useOutletContext, useParams } from 'react-router-dom';
 import { styled } from 'styled-components';
 import { fetchCoinInfo, fetchCoinTickers } from '../api';
 import { Container, Header, Title, Loader } from './Coins';
@@ -109,6 +109,9 @@ interface PriceData {
       volume_24h_change_24h: number;
     };
   };
+}
+
+interface IToggleDark {
 }
 
 function Coin() {

@@ -4,6 +4,9 @@ import Coin from './routes/Coin';
 import Coins from './routes/Coins';
 import Price from './routes/Price';
 
+interface IRouterProps {
+}
+
 function Router() {
   return <BrowserRouter>
     <Routes>
@@ -16,5 +19,28 @@ function Router() {
     </Routes>
   </BrowserRouter>
 }
+
+// const router = createBrowserRouter(
+//   [
+//     {
+//       path: '/',
+//       element: <Coins />,
+//     },
+//     {
+//       path: '/:coinID',
+//       element: <Coin />,
+//       children: [
+//         {
+//           path: 'chart',
+//           element: <Chart />,
+//         },
+//         {
+//           path: 'price',
+//           element: <Price />
+//         }
+//       ]
+//     }
+//   ]
+// );
 
 export default Router;
